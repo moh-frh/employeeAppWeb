@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <h2>Employee List</h2>
+
+  <div class="text-danger" *ngIf="errorMessages">{{errorMessages | json}}</div>
+
+  <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchEmployees()">
+    <div class="input-group">
+      <label class="input-group-text">keyword</label>
+      <input type="text" formControlName="keyword" class="form-control">
+      <button class="btn btn-info">search</button>
+    </div>
+  </form>
+
+  {{searchFormGroup.value | json}}
+
+  <table class="table table-striped" *ngIf="employees">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>{{ employee.departement }}</td>
+        <td>
+          <!-- <button
+            class="btn btn-sm btn-primary"
+            [routerLink]="'/edit-customer/'+employee.id"
+          >
+            Edit
+          </button> -->
+          <button
+            class="btn btn-sm btn-danger"
+            (click)="handleDeleteEmployee(employee.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
