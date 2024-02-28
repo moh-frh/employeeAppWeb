@@ -1,0 +1,36 @@
+<!-- edit-employee.component.html -->
+
+<h2>Edit Employee</h2>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">firstName:</label>
+    <input type="text" id="firstName" formControlName="firstName">
+    <!-- <div *ngIf="editForm.get('name').errors?.required && editForm.get('name').touched">
+      Name is required.
+    </div> -->
+  </div>
+
+  <div>
+    <label for="lastName">lastName:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+    <!-- <div *ngIf="editForm.get('email').errors?.required && editForm.get('email').touched">
+      Email is required.
+    </div> -->
+    <!-- <div *ngIf="editForm.get('email').errors?.email && editForm.get('email').touched">
+      Please enter a valid email.
+    </div> -->
+  </div>
+
+  <div>
+    <label for="salary">salary:</label>
+    <input type="text" id="salary" formControlName="salary">
+  </div>
+  <div>
+    <label for="departement">departement:</label>
+    <input type="text" id="departement" formControlName="departement">
+  </div>
+
+  <!-- Add more fields here for other employee properties -->
+
+  <button type="submit">Submit</button>
+</form>

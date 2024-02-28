@@ -32,12 +32,12 @@
         <td>{{ employee.salary }}</td>
         <td>{{ employee.departement }}</td>
         <td>
-          <!-- <button
+          <button
             class="btn btn-sm btn-primary"
-            [routerLink]="'/edit-customer/'+employee.id"
+            [routerLink]="['/employees', employee.id, 'edit']"
           >
             Edit
-          </button> -->
+          </button>
           <button
             class="btn btn-sm btn-danger"
             (click)="handleDeleteEmployee(employee.id)"

@@ -9,6 +9,7 @@ import { LeavesComponent } from './leaves/leaves.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NewEmployeeComponent } from './new-employee/new-employee.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NewEmployeeComponent } from './new-employee/new-employee.component';
     NavbarComponent,
     EmployeesComponent,
     LeavesComponent,
-    NewEmployeeComponent
+    NewEmployeeComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,
