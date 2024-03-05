@@ -27,7 +27,7 @@ export class NewEmployeeComponent {
     })
   }
 
-  handleSaveEmployee() {
+  handleSaveEmployee() { 
     let employee: Employee = this.newEmployeeFormGroup.value;
     console.warn("employee : ", employee);
     this.employeeService.saveEmployee(employee).subscribe({

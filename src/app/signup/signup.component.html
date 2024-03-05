@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <div class="modal-header">
+      <h5 class="modal-title">register</h5>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="userFormGroup" (ngSubmit)="handleSaveUser()">
+        <div class="form-group">
+          <label for="firstName">username</label>
+          <input type="text" class="form-control" id="firstName" formControlName="username"/>
+        </div>
+        <div class="form-group">
+          <label for="lastName">email</label>
+          <input type="text" class="form-control" id="lastName" formControlName="email" />
+        </div>
+        
+        <div class="form-group">
+          <label for="firstName">password</label>
+          <input type="text" class="form-control" id="firstName" formControlName="password"/>
+        </div>
+        <!-- <div class="form-group">
+          <label for="lastName">role</label>
+          <input type="text" class="form-control" id="lastName" formControlName="role" />
+        </div> -->
+
+        <select class="form-select" aria-label="Default select example" formControlName="role">
+            <option value="1">Manager</option>
+            <option value="2">Employee</option>
+        </select>
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+  
+  
+  </div>
+  
